@@ -14,6 +14,7 @@ app.use(bodyParser.json())
 
 //for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use('/www', express.static(path.resolve(__dirname, './www')))
 
 routes(app)
 
