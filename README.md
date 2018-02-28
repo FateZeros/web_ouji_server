@@ -1,6 +1,6 @@
 # web_ouji_server
 
-为web_ouji项目写的后端服务，主要生成doc
+为 web_ouji 项目写的后端服务，主要生成 docx 文档
 
 # 安装[docxtemplater](https://docxtemplater.com/)
 
