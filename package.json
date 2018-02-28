@@ -1,0 +1,28 @@
+{
+  "name": "web_ouji_server",
+  "version": "1.0.0",
+  "description": "node docxParse",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FateZeros/web_ouji_server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FateZeros/web_ouji_server/issues"
+  },
+  "homepage": "https://github.com/FateZeros/web_ouji_server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "docxtemplater": "^3.4.2",
+    "express": "^4.16.2",
+    "jszip": "^2.6.1",
+    "nodemon": "^1.17.1"
+  }
+}
