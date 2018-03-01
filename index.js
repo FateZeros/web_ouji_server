@@ -14,7 +14,12 @@ app.use(bodyParser.json())
 
 //for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use('/www', express.static(path.resolve(__dirname, './www')))
+app.use(express.static(path.resolve(__dirname, './www')))
+
+app.get('*', function(req, res) {
+    const html = fs.readFileSync(path.resolve(__dirname, './www/index.html'), 'utf-8')
+    res.send(html)
+})
 
 routes(app)
 
