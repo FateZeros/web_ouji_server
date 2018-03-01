@@ -47,6 +47,8 @@ router.post('/produceword', function (req, res) {
     // buf is a nodejs buffer, you can either write it to a file or do anything else with it.
 		fs.writeFileSync(path.resolve(__dirname, docOutPath), buf)
 
+		res.download(docOutPath, docxName + './docx')
+		
 		res.send({
 			code: 200,
 			msg: '提交成功'
