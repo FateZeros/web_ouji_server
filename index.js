@@ -14,7 +14,10 @@ app.use(bodyParser.json())
 
 //for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static(path.resolve(__dirname, './www')))
+app.use(express.static(path.resolve(__dirname, 'www')))
+
+//加载 word静态资源
+app.use(express.static(path.resolve(__dirname, 'output')))
 
 app.get('*', function(req, res) {
     const html = fs.readFileSync(path.resolve(__dirname, './www/index.html'), 'utf-8')
