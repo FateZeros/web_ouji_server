@@ -29,7 +29,7 @@ app.get('/output/:docxname', function(req, res) {
 		const docOutPath = './output/' + docxname + '.docx'
 		const file = path.resolve(__dirname, docOutPath)
 		res.download(file, downloadName)
-		res.end()
+		// res.end()
 })
 
 // app.get('/', function(req, res) {
