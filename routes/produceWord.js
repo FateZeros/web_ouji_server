@@ -61,30 +61,6 @@ router.post('/produceword', function (req, res) {
 	}
 })
 
-// router.get('/download', function (req, res) {
-// 	// const downloadName = 'NNC1.docx'
-// 	// const docOutPath = '../output/NNC1.docx'
-// 	// const file = path.resolve(__dirname, docOutPath)
-// 	// console.log(downloadName, 111)
-// 	// res.cache(0)
-// 	// res.download(file, downloadName)
-// 	// // res.end()
-// 	// res.send({
-// 	// 	code: 200,
-// 	// 	msg: '成功'
-// 	// })
-// 	console.log(1212)
-// 	// var file = fs.readFileSync(path.resolve(__dirname, docOutPath), 'binary');
-
-//  //  res.setHeader('Content-Length', file.length);
-//  //  res.write(file, 'binary');
-//  //  res.end();
-//  res.send({
-//  	code: 200,
-//  	msg: 'fhhh'
-//  })
-// })
-
 module.exports = router
 
 
