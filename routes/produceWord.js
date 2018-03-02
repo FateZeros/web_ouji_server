@@ -12,7 +12,7 @@ router.post('/produceword', function (req, res) {
 	const { docxName, docxParams } = req.body
 	const docPath = '../temp/' + docxName + '.docx'
 	const docOutPath = '../output/' + docxName + '.docx'
-	console.log(docPath, docOutPath)
+	// console.log(docPath, docOutPath)
 	//Load the docx file as a binary
 	try {
 
@@ -46,9 +46,7 @@ router.post('/produceword', function (req, res) {
 
     // buf is a nodejs buffer, you can either write it to a file or do anything else with it.
 		fs.writeFileSync(path.resolve(__dirname, docOutPath), buf)
-
-		res.download(docOutPath, docxName + './docx')
-		
+	
 		res.send({
 			code: 200,
 			msg: '提交成功'
@@ -62,6 +60,30 @@ router.post('/produceword', function (req, res) {
 		})
 	}
 })
+
+// router.get('/download', function (req, res) {
+// 	// const downloadName = 'NNC1.docx'
+// 	// const docOutPath = '../output/NNC1.docx'
+// 	// const file = path.resolve(__dirname, docOutPath)
+// 	// console.log(downloadName, 111)
+// 	// res.cache(0)
+// 	// res.download(file, downloadName)
+// 	// // res.end()
+// 	// res.send({
+// 	// 	code: 200,
+// 	// 	msg: '成功'
+// 	// })
+// 	console.log(1212)
+// 	// var file = fs.readFileSync(path.resolve(__dirname, docOutPath), 'binary');
+
+//  //  res.setHeader('Content-Length', file.length);
+//  //  res.write(file, 'binary');
+//  //  res.end();
+//  res.send({
+//  	code: 200,
+//  	msg: 'fhhh'
+//  })
+// })
 
 module.exports = router
 

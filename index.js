@@ -19,12 +19,23 @@ app.use(express.static(path.resolve(__dirname, 'www')))
 //加载 word静态资源
 app.use(express.static(path.resolve(__dirname, 'output')))
 
-app.get('*', function(req, res) {
-    const html = fs.readFileSync(path.resolve(__dirname, './www/index.html'), 'utf-8')
-    res.send(html)
+routes(app)
+
+// 下载
+app.get('/output/:docxname', function(req, res) {
+		console.log(req.params, 11212)
+		const { docxname } = req.params
+		const downloadName = docxname + '.docx'
+		const docOutPath = './output/' + docxname + '.docx'
+		const file = path.resolve(__dirname, docOutPath)
+		res.download(file, downloadName)
+		res.end()
 })
 
-routes(app)
+// app.get('/', function(req, res) {
+//     const html = fs.readFileSync(path.resolve(__dirname, './www/index.html'), 'utf-8')
+//     res.send(html)
+// })
 
 app.use(function(req, res) {
   res.status(404).end()
