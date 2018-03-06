@@ -17,6 +17,12 @@ npm install express --save
 npm install body-parser --save
 ```
 
+## 安装 session
+进行登录认证
+```bash
+npm install express-session --save
+```
+
 
 # pm2 
 ```bash
