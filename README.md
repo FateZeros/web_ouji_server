@@ -2,7 +2,7 @@
 
 为 web_ouji 项目写的后端服务，主要生成 docx 文档, 且提供文档下载
 
-# 安装[docxtemplater](https://docxtemplater.com/)
+## 安装[docxtemplater](https://docxtemplater.com/)
 
 ```bash
 npm install docxtemplater --save
@@ -10,7 +10,7 @@ npm install jszip@2 --save
 npm install jszip-utils --save # only for the browser (webpack)
 ```
 
-# 接口
+## 接口
 
 ```bash
 npm install express --save
@@ -18,13 +18,15 @@ npm install body-parser --save
 ```
 
 ## 安装 session
+
 进行登录认证
+
 ```bash
 npm install express-session --save
 ```
 
+## pm2
 
-# pm2 
 ```bash
 
 npm install pm2 -g
