@@ -8,7 +8,7 @@ const session = require('express-session')
 const app = express()
 
 // 设置服务器端口
-app.set('port', (process.env.port || 6633))
+app.set('port', process.env.port || 6633)
 
 //for parsing application/json
 app.use(bodyParser.json())
@@ -24,12 +24,12 @@ routes(app)
 
 // 下载
 app.get('/output/:docxname', function(req, res) {
-		// console.log(req.params, 11212)
-		const { docxname } = req.params
-		const downloadName = docxname + '.docx'
-		const docOutPath = './output/' + docxname + '.docx'
-		const file = path.resolve(__dirname, docOutPath)
-		res.download(file, downloadName)
+  // console.log(req.params, 11212)
+  const { docxname } = req.params
+  const downloadName = docxname + '.docx'
+  const docOutPath = './output/' + docxname + '.docx'
+  const file = path.resolve(__dirname, docOutPath)
+  res.download(file, downloadName)
 })
 
 // app.get('/', function(req, res) {
@@ -41,6 +41,6 @@ app.use(function(req, res) {
   res.status(404).end()
 })
 
-app.listen(app.get('port'), function () {
+app.listen(app.get('port'), function() {
   console.log('Visit http://localhost:' + app.get('port'))
 })
