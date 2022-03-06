@@ -2,7 +2,7 @@
 FROM node:6.10.0
 
 # 镜像作者
-MAINTAINER YJF <yjf490293266@qq.com>
+MAINTAINER YJF <fatejane@163.com>
 
 RUN mkdir -p /web_ouji_server
 

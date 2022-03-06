@@ -20,9 +20,12 @@
   "homepage": "https://github.com/FateZeros/web_ouji_server#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.8",
     "docxtemplater": "^3.4.2",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "node-xlsx": "^0.17.2",
     "nodemon": "^1.17.1",
     "pizzip": "^3.0.6"
   },
