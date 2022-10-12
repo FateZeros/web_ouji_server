@@ -22,7 +22,7 @@
     "body-parser": "^1.18.2",
     "cors": "^2.8.5",
     "dayjs": "^1.10.8",
-    "docxtemplater": "^3.4.2",
+    "docxtemplater": "^3.31.4",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "node-xlsx": "^0.17.2",
